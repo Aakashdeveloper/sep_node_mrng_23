@@ -61,3 +61,42 @@ write code
 Machine language
 
 c++ + libuv + chromev8
+
+NPM > Node package manager
+Install packages
+Maintain Dependency
+run application
+
+
+JSON
+> JavaScript Object Notation
+Key value pair of data
+
+[
+   {
+      "name":"Amit",
+      "city":"Paris"
+   },
+   {
+      "name":"Nikita",
+      "city":"Delhi"
+   },
+   {
+      "name":"Lohit",
+      "city":"Mumbai",
+      "age":10
+   }
+]
+
+
+Package.json
+> starting point in the app
+> contains all the dependencies
+> Contains script start,test,build
+> Meta Data (name,version,description)
+
+// Step to generate package.json
+> open terminal go inside the folder
+> npm init
+> Answer all question
+> type "yes"
