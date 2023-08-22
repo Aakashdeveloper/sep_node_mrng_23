@@ -10,6 +10,7 @@ Ifelse,Function,object,JSON,Variables
 
 
 NPM
+/////////
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
@@ -100,3 +101,7 @@ Package.json
 > npm init
 > Answer all question
 > type "yes"
+
+// Step to install package
+> open terminal go inside the folder
+> npm i packagename
