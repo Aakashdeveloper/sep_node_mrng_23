@@ -1,0 +1,14 @@
+{
+  "name": "myserver",
+  "version": "1.0.0",
+  "description": "this is about nodejs",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticApi.js"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "developerfunnel",
+  "license": "ISC"
+}

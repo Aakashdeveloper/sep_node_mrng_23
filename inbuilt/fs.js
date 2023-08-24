@@ -13,7 +13,12 @@ let fs = require('fs');
 //     console.log(data)
 // })
 
-fs.rename('myCode.txt','newFile.txt',function(err){
+// fs.rename('myCode.txt','newFile.txt',function(err){
+//     if(err) throw err
+//     console.log('File Renamed')
+// })
+
+fs.unlink('myFile.txt',function(err){
     if(err) throw err
-    console.log('File Renamed')
+    console.log('File Deleted')
 })
