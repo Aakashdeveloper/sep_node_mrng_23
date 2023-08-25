@@ -4,7 +4,8 @@
   "description": "this is about nodejs",
   "main": "fs.js",
   "scripts": {
-    "start": "node staticApi.js"
+    "start": "node http.js",
+    "dev":"nodemon http.js"
   },
   "keywords": [
     "Node"

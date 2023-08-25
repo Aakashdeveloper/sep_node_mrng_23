@@ -3,6 +3,7 @@ https://nodejs.org/en > Install
 https://github.com/ > Signup
 https://git-scm.com/downloads > Install
 https://github.com/Aakashdeveloper > Follow
+https://www.mongodb.com/try/download/community > download
 
 
 JavaScript
@@ -10,8 +11,8 @@ Ifelse,Function,object,JSON,Variables
 
 
 NPM
-/////////
 Basic NodeJS(in built)(Os,file,http)
+////////////
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
 Node-Es6(.babel)
@@ -153,3 +154,32 @@ You can find the option Bank Transfer in Phonepe and Google pay. There you can e
 
 Thank you
 Naresh it
+
+
+> local dependency
+* local to the folder
+* can only be used inside the same folder
+* Add to the package.json
+* npm i packagename
+
+> global dependency
+* Can be used for any app
+* installed in the laptop
+* need admin acces to install
+* Will not add to package.json
+* only package require before app start (for start,build)
+
+> dev dependency
+* Same like local dependency
+* Only require for develpment 
+* only added in seperate object which we can ignore while deployment
+* npm i packagename --save-dev
+
+# Step to install global dependecy windows
+* open cmd as adminstrator
+* npm i -g nodemon
+
+
+# Step to install global dependecy mac/linux
+* open terminal
+* sudo npm i -g nodemon
