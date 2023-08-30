@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
     // res.send('<h1>Hii From Express</h1>')
-    res.render('index',{title:'Node App',test:'code'})
+    res.render('index',{title:'Home Page'})
 })
 
 app.use('/category',categoryRouter);
