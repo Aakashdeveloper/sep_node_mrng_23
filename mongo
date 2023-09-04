@@ -1,0 +1,71 @@
+RollNo | Hindi  | English | Computer |
+  1    |  80    |         |          |
+  2    |        |  70     |          |
+  3    |   89   |         |    90    |
+
+[
+    {
+        RollNo:1,
+        Hindi:80
+    },
+    {
+        RollNo:2,
+        English:70
+    },
+    {
+        RollNo:3,
+        Hindi:89,
+        Computer:90
+    }
+]
+
+/// Setup mongodb 
+> Download and Install > https://www.mongodb.com/try/download/community
+
+> Inside C drive make folder by name of data
+C:/data
+> Inside data make folder by name of db
+C:/data/db
+
+SQl        Mongo     
+Database   Database
+Table      Collection
+Row        Document
+Select     Find
+Insert     Insert
+Delete     Remove
+Update     Update
+
+27017 > Default Port
+
+Mongo Server
+> open cmd and go inside bin folder
+* C:/progamFile/mongodb/server/5.2/bin
+* mongod
+(this will start mongodb server on port 27017)
+(do not close this cmd)
+
+Mongo Client
+> open cmd and go inside bin folder
+> mongo
+(Test your querries)
+
+////////////////////////////////////////////////////////////////
+> To See all the database
+* show dbs
+
+> To go inside database
+* use dbname
+
+> To see all collections inside database
+* show collections
+
+> To see data in the collections / find query
+* db.collectionName.find()
+* db.category.find().pretty()
+
+> To create new database
+* use sepnode
+
+> insert data
+db.testusers.insert({rollNo:1,Hindi:80})

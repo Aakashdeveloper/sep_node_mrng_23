@@ -212,3 +212,12 @@ var b = "my age is "+a
 let a = 10
 let b = `my age is ${a}`
 "my age is 10"
+
+
+
+function add(a,b){
+   return a+b
+}
+
+
+add(1,2)

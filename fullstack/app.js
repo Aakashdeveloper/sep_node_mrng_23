@@ -1,9 +1,15 @@
 let express = require('express');
 let app = express();
 let port = 8120;
-let categoryRouter = require('./src/controller/categoryRouter');
-let productRouter = require('./src/controller/productRouter');
 
+let menu = [
+    {link:'/',name:'Home'},
+    {link:'/category',name:'Category'},
+    {link:'/products',name:'Products'}
+]
+
+let categoryRouter = require('./src/controller/categoryRouter')(menu);
+let productRouter = require('./src/controller/productRouter')(menu);
 
 //static file path
 app.use(express.static(__dirname + '/public'))
@@ -14,7 +20,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
     // res.send('<h1>Hii From Express</h1>')
-    res.render('index',{title:'Home Page'})
+    res.render('index',{title:'Home Page',menu})
 })
 
 app.use('/category',categoryRouter);

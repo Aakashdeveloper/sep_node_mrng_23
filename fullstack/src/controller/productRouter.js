@@ -1,7 +1,6 @@
 let express = require('express');
 let productRouter = express.Router();
 
-
 let Products = [
     {
         "id": 1,
@@ -516,15 +515,21 @@ let Products = [
     }
 ]
 
-productRouter.route('/')
-    .get((req,res) => {
-       // res.send(Products)
-       res.render('products',{title:'Products Page',Products})
-    })
+function router(menu){
 
-productRouter.route('/details')
-    .get((req,res) => {
-        res.send('Products Details')
-    })
+    productRouter.route('/')
+        .get((req,res) => {
+        // res.send(Products)
+        res.render('products',{title:'Products Page',Products,menu})
+        })
 
-module.exports = productRouter
+    productRouter.route('/details')
+        .get((req,res) => {
+            res.send('Products Details')
+        })
+
+    return productRouter
+
+}
+
+module.exports = router
