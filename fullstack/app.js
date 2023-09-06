@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
 let port = 8120;
+let {dbConnection} = require('./src/controller/dbContoller')
 
 let menu = [
     {link:'/',name:'Home'},
@@ -29,5 +30,6 @@ app.use('/products',productRouter);
 //creating server
 app.listen(port,function(err){
     if(err) throw err;
+    dbConnection();
     console.log(`server listening to port ${port}`)
 })

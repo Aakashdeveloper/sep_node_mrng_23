@@ -69,3 +69,10 @@ Mongo Client
 
 > insert data
 db.testusers.insert({rollNo:1,Hindi:80})
+
+> Find with condition
+* db.collectionName.find(query)
+* db.products.find({Brand:"Gucci"})
+* db.products.find({Brand:"Gucci",Color:"Maroon"})
+
+

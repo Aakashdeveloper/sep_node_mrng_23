@@ -221,3 +221,14 @@ function add(a,b){
 
 
 add(1,2)
+
+////
+Params
+> What we pass after /
+> we need to define in the route
+> if defined it is complusory to pass
+
+QueryParams
+> What we pass after ?
+> no need to define
+> not complusory to pass
