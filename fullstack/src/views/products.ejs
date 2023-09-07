@@ -101,7 +101,8 @@
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=Products[i].category%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted">
-                    <%=Products[i].Brand?Products[i].Brand:Products[i].company%>  • <a href="#" class="text-muted">Read More</a></small>
+                    <%=Products[i].Brand?Products[i].Brand:Products[i].company%>  • 
+                    <a href="/products/details/<%=Products[i]._id%>" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>

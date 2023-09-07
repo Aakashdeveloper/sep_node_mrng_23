@@ -76,3 +76,4 @@ db.testusers.insert({rollNo:1,Hindi:80})
 * db.products.find({Brand:"Gucci",Color:"Maroon"})
 
 
+_id> object id and it is always unique
