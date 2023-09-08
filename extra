@@ -14,10 +14,10 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
-////////////
 Node-Es6(.babel)
 Redis v3  > 6379
 Redis v4
+////////////
 Redisv4 With Mongov5
 ImageUpload
 ImageUpload(formidable)
@@ -232,3 +232,16 @@ QueryParams
 > What we pass after ?
 > no need to define
 > not complusory to pass
+
+"type": "module",
+
+redis => 6379
+
+// redis
+KEYS *
+set key value
+get key
+del key
+FLUSHALL
+
+set keyname value ex time
