@@ -50,6 +50,9 @@ Mongo Client
 > mongo
 (Test your querries)
 
+// for mongo6
+> mongosh
+
 ////////////////////////////////////////////////////////////////
 > To See all the database
 * show dbs
