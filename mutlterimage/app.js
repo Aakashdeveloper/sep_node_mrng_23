@@ -1,7 +1,9 @@
 const express = require('express');
 const multer = require('multer');
 const app = express();
-const port = 9112;
+const dotenv = require('dotenv');
+dotenv.config()
+const port = process.env.PORT || 1221;
 
 //static file
 app.use(express.static(__dirname + '/public'));

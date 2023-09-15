@@ -21,13 +21,11 @@ Redisv4 With Mongov5
 Redis Cloud
 ImageUpload
 ImageUpload(formidable)
-////////////
 Multer
 Upload image in db
-
 S3 Imageupload
+////////////
 MongoDb Basic >27017  (local/cloud)
-
 Zomato App backend
 Api with NodeJS(Rest)>1
 DashBoard(Crud)
@@ -255,5 +253,5 @@ npm i ejs express multer
 
 //mongoupload
 npm i ejs express mongoose multer
-npm cache clean --force
-sudo chown -R 501:20 "/Users/aakash/.npm"
+
+mongod --config /usr/local/etc/mongod.conf --fork

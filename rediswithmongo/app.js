@@ -5,7 +5,7 @@ const url = "mongodb://127.0.0.1:27017"
 const mClient = new MongoClient(url);
 const rClient = createClient({host:'localhost',port:6379})
 
-let port = 7011;
+let port = process.env.PORT || 7011;
 let app = express();
 
 // connecting redis
