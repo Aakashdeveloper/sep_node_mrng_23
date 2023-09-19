@@ -53,6 +53,7 @@ Mongo Client
 // for mongo6
 > mongosh
 
+_id> object id and it is always unique
 ////////////////////////////////////////////////////////////////
 > To See all the database
 * show dbs
@@ -78,5 +79,53 @@ db.testusers.insert({rollNo:1,Hindi:80})
 * db.products.find({Brand:"Gucci"})
 * db.products.find({Brand:"Gucci",Color:"Maroon"})
 
+//projection
+db.colname.find({condition},{projection})
 
-_id> object id and it is always unique
+db.restaurants.find({},{restaurant_name:1,address:1}).pretty()
+
+db.restaurants.find({},{restaurant_name:1,address:1,_id:0}).pretty()
+
+
+db.restaurants.find({state_id:1},{restaurant_name:1,address:1,_id:0}).pretty()
+
+
+db.restaurants.find({state_id:1},{restaurant_name:1,address:1,mealTypes:1}).pretty()
+
+db.restaurants.find({"mealTypes.mealtype_id":1},{restaurant_name:1,address:1,mealTypes:1}).pretty()
+
+
+db.restaurants.find({},{restaurant_name:1,address:1,_id:0,cost:1}).pretty()
+
+db.restaurants.find({},{restaurant_name:1,address:1,_id:0,cost:1}).sort({cost:1}).pretty()
+
+
+db.restaurants.find({},{restaurant_name:1,address:1,_id:0,cost:1}).sort({cost:1}).skip(0).limit(4).pretty()
+
+db.restaurants.find({
+    $and:[
+        {"mealTypes.mealtype_id":1},
+        {"cuisines.cuisine_id":1}
+    ]
+})
+
+db.restaurants.find({
+    $or:[
+        {"mealTypes.mealtype_id":1},
+        {"cuisines.cuisine_id":1}
+    ]
+})
+
+
+db.restaurants.find({"mealTypes.mealtype_id":{$in:[1,4,2]}},{restaurant_name:1,mealTypes:1}).pretty()
+
+
+db.restaurants.find({cost:{$gt:900}},{restaurant_name:1,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:900}},{restaurant_name:1,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:500,$lt:1000}},{restaurant_name:1,cost:1}).pretty()
+
+# lookups
+# update
+# Delete
