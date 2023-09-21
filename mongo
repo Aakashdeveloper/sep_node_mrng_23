@@ -129,3 +129,89 @@ db.restaurants.find({cost:{$gt:500,$lt:1000}},{restaurant_name:1,cost:1}).pretty
 # lookups
 # update
 # Delete
+
+db.orders.insertMany([ 
+  { "_id" : 1, "item" : "almonds", "price" : 12, "quantity" : 2 }, 
+  { "_id" : 2, "item" : "pecans", "price" : 20, "quantity" : 1 }, 
+  { "_id" : 3 } 
+])
+
+db.inventory.insertMany([ 
+  { "_id" : 1, "sku" : "almonds", description: "product 1", "instock" : 120 }, 
+  { "_id" : 2, "sku" : "bread", description: "product 2", "instock" : 80 }, 
+  { "_id" : 3, "sku" : "cashews", description: "product 3", "instock" : 60 }, 
+  { "_id" : 4, "sku" : "pecans", description: "product 4", "instock" : 70 }, 
+  { "_id" : 5, "sku": null, description: "Incomplete" }, 
+  { "_id" : 6 } 
+])
+
+db.orders.aggregate([
+    {
+        $lookup:{
+            from:'inventory',
+            localField:'item',
+            foreignField:'sku',
+            as:'combine_data'
+        }
+    }
+])
+
+[
+  {
+    _id: 1,
+    item: 'almonds',
+    price: 12,
+    quantity: 2,
+    combine_data: [
+      {
+        _id: 1,
+        sku: 'almonds',
+        description: 'product 1',
+        instock: 120
+      }
+    ]
+  },
+  {
+    _id: 2,
+    item: 'pecans',
+    price: 20,
+    quantity: 1,
+    combine_data: [
+      { _id: 4, sku: 'pecans', description: 'product 4', instock: 70 }
+    ]
+  },
+  {
+    _id: 3,
+    combine_data: [ { _id: 5, sku: null, description: 'Incomplete' }, { _id: 6 } ]
+  }
+]
+
+db.users.insertOne({"name":"Amit","city":"Delhi"})
+db.users.update({condition},{$set:values})
+
+db.users.updateOne(
+    {name:"Amit"},
+    {
+        $set:{
+            "city":"Amsterdam",
+            "role":"Admin"
+        }
+    }
+)
+
+
+db.users.updateOne(
+    {name:"Amit"},
+    {
+        $unset:{
+            "city":1
+        }
+    }
+)
+
+//delete
+//remove all data
+db.users.remove({})
+
+//remove particular data
+db.users.remove({condition})

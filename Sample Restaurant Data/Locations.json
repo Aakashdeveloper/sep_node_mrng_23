@@ -1,4 +1,4 @@
-db.location.insert(
+db.location.insertMany(
     [
       {
         "location_id": 1,

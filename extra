@@ -255,3 +255,10 @@ npm i ejs express multer
 npm i ejs express mongoose multer
 
 mongod --config /usr/local/etc/mongod.conf --fork
+
+
+C > Create > POST
+R > Read > GET
+U > Update > PUT
+D > Delete > DELETE
+

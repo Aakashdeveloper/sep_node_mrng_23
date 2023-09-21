@@ -1,4 +1,4 @@
-db.mealType.insert([
+db.mealType.insertMany([
     {
         "mealtype_id": 1,
         "mealtype": "Breakfast",
