@@ -1,14 +1,28 @@
 // Page 1
 
 (GET) List of all cities
+> http://localhost:8771/location
+
 (GET) List of all Restaurants
-(GET) Restaurants wrt city
+> http://localhost:8771/restaurants 
+
+(GET) Restaurants wrt 
+> http://localhost:8771/restaurants?stateId=3
+
 (GET) List of all meals
+> http://localhost:8771/mealType
 
 // Page2
 (GET) Restaurants wrt meal
+> http://localhost:8771/restaurants?mealId=2
+> http://localhost:8771/restaurants?mealId=2&stateId=1
+
 (GET) Restaurants wrt meal + Cuisine
+> http://localhost:8771/filters/2?cuisineId=2
+
 (GET) Restaurants wrt meal + Cost
+> http://localhost:8771/filters/2?hcost=1200&lcost=500
+
 (GET) Sort on basis of price
 (GET) Pagination
 
