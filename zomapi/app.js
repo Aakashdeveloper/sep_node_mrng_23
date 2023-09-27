@@ -1,12 +1,13 @@
 let express = require('express');
 let app = express();
-let mongo = require('mongodb');
+const {ObjectId} = require('mongodb');
 let dotenv = require('dotenv');
 dotenv.config()
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT || 3000;
-let {dbConnect,getData} = require('./controller/dbController');
+let {dbConnect,getData,getDataSort,
+    getDataSortLimit} = require('./controller/dbController');
 
 
 app.use(bodyParser.urlencoded({extended:true}))
@@ -66,6 +67,18 @@ app.get('/filters/:mealId',async(req,res) => {
     let cuisineId = Number(req.query.cuisineId);
     let hcost = Number(req.query.hcost);
     let lcost = Number(req.query.lcost);
+    let sort = {cost:1};
+    let skip = 0;
+    let limit = 10000000000000;
+    if(req.query.sort){
+        sort={cost:req.query.sort}
+    }
+
+    if(req.query.skip && req.query.limit){
+        skip = Number(req.query.skip)
+        limit = Number(req.query.limit)
+    }
+
     if(cuisineId){
         query = {
             "mealTypes.mealtype_id":mealId,
@@ -76,9 +89,31 @@ app.get('/filters/:mealId',async(req,res) => {
             "mealTypes.mealtype_id":mealId,
             $and:[{cost:{$gt:lcost,$lt:hcost}}]
         }
+    }else{
+        query={
+            "mealTypes.mealtype_id":mealId
+        }
     }
-    let output = await getData(collection,query)
+    let output = await getDataSortLimit(collection,query,sort,skip,limit)
     res.status(200).send(output)
+})
+
+// restaurants details
+app.get('/details/:id', async(req,res) => {
+    // let id = Number(req.params.id);
+    // let query = {"restaurant_id":id};
+    const validObjId = (id) => {
+        const idPattern = /^[0-9a-fA-F]{24}$/
+        return idPattern.test(id)
+    }
+    if(validObjId(req.params.id)){
+        let collection = 'restaurants';
+        let query = {_id:new ObjectId(req.params.id)}
+        let output = await getData(collection,query);
+        res.status(200).send(output)
+    }else{
+        res.send('Invalid Object id')
+    }
 })
 
 

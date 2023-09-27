@@ -24,10 +24,14 @@
 > http://localhost:8771/filters/2?hcost=1200&lcost=500
 
 (GET) Sort on basis of price
+> http://localhost:8771/filters/1?lcost=300&hcost=900&sort=-1
+
 (GET) Pagination
+> http://localhost:8771/filters/1?skip=6&limit=2
 
 //page3
 (GET) Details of restaurants
+> http://localhost:8771/details/651394d817e34ede35314a51
 (GET) Menu wrt Restaurants 
 
 //Page4

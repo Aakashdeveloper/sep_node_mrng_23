@@ -37,7 +37,7 @@ db.restaurants.insert([
       "https://b.zmtcdn.com/data/reviews_photos/ff4/8ea6f51aebe1cad803c293574f0afff4_1453703271.jpg",
       "https://b.zmtcdn.com/data/reviews_photos/baa/30e9afd319d48c1122e7c19228287baa_1517462886.jpg"
     ]
-  }
+  },
   {
     "restaurant_id": 3,
     "restaurant_name": "Food Adda",
