@@ -41,9 +41,42 @@ async function getDataSortLimit(colName,query,sort,skip,limit){
     return output
 }
 
+async function postData(colName,data){
+    let output;
+    try{
+        output = await db.collection(colName).insert(data)
+    }catch(err){
+        output = {"error":`Error while inserting in ${colName}`}
+    }
+}
+
+async function updateData(colName,condition,data){
+    let output;
+    try{
+        output = await db.collection(colName).update(condition,data)
+    }catch(err){
+        output = {"error":`Error while updating`}
+    }
+    return output
+}
+
+async function deleteData(colName,condition){
+    let output;
+    try{
+        output = await db.collection(colName).remove(condition)
+    }catch(err){
+        output = {"error":`Error while Deleting`}
+    }
+    return output
+}
+
+
 module.exports = {
     dbConnect,
     getData,
     getDataSort,
-    getDataSortLimit
+    getDataSortLimit,
+    postData,
+    updateData,
+    deleteData
 }
