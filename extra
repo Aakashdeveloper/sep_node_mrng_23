@@ -27,11 +27,10 @@ S3 Imageupload
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
 Api with NodeJS(Rest)>1
-////////////
-DashBoard(Crud)
 Swagger
 Testing
-
+//////////// 4th wed
+DashBoard(Crud)
 Github
 --Deployment of app---
 render
@@ -39,17 +38,32 @@ Pm2
 Nginx
 Jenkins
 Docker
+
+5th thrus
 Email With Node(nodemailer)
+TelegramChat
+NodeJs with postgres
+
+6th 30min friday
+Chatapp
+
+10th tues
 Login/Logout(JWT)
+
+11th wed
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 Oauth(with google)
-TelegramChat
+
+12th 30min thrus
+AWS lambda micorservice
+
+17th tuesd
 GraphQl API
 Paytm-Payment
-Chatapp
-NodeJs with postgres
 FIREBASE
-AWS lambda micorservice
+
+18th wed
+
 --------NOT---------
 React/Angular
 Html/css/jquery

@@ -35,7 +35,6 @@ db.dashboard.insert([
         "isActive": true
     },
     {
-        "_id": "64474473ba2ded19c8b40dd3",
         "name": "Kanika",
         "city": "Delhi",
         "phone": 678687687,

@@ -1,0 +1,151 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description":"This is the api for users"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description":"Public Route"
+        }
+    ],
+    "paths":{
+        "/health":{
+            "summary":"Testing User Check",
+            "get":{
+                "description":"Use Api Health Check",
+                "tags":["Public Route"],
+                "responses":{
+                    "200":{
+                        "description":"User Health Pass"
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Testing User Route",
+            "get":{
+                "description":"User Api  Check",
+                "tags":["Public Route"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose Role as Admin or User"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter City Name"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"User Health Pass"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing User Route",
+            "get":{
+                "description":"User Api  Check",
+                "tags":["Public Route"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose Role as Admin or User"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"User Health Pass"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Testing User Routes",
+            "post":{
+                "description":"User Api  Check",
+                "tags":["Public Route"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name": "Sahil",
+                                "city": "Delhi",
+                                "phone": 768767678,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updateUser":{
+            "summary":"Testing User Routes",
+            "put":{
+                "description":"User Api  Check",
+                "tags":["Public Route"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":"",
+                                "name": "Sahil",
+                                "city": "Delhi",
+                                "phone": 768767678,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Testing User Routes",
+            "delete":{
+                "description":"User Api  Check",
+                "tags":["Public Route"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
