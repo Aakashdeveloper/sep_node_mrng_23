@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node apiWithoutUi.js",
     "dev": "nodemon apiWithoutUi.js",
-    "test":"mocha --timeout 10000"
+    "test":"mocha --timeout 10000",
+    "ui":"nodemon apiWithUi.js"
   },
   "keywords": [],
   "author": "",

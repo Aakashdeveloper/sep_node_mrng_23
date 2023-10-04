@@ -1,0 +1,16 @@
+//first time form new folder
+
+open the cmd inside folder
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Aakashdeveloper/sepDashbord23.git
+git push -u origin main
+
+
+//next every time from same folder
+git add .
+git commit -m "code"
+git push
