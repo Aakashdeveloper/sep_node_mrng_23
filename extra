@@ -35,14 +35,11 @@ Github
 render (https://dashboard.render.com/login)
 Pm2
 Jenkins
-
-////////////
-7th Friday
 Email With Node(nodemailer)
 TelegramChat
 NodeJs with postgres
 Chatapp
-
+////////////
 10th tues
 Login/Logout(JWT)
 Nginx
@@ -283,3 +280,13 @@ pm2 status
 
 
 pm2 start filename -i processNumber
+
+https://support.google.com/accounts/answer/185833?hl=en
+
+
+https://www.postgresql.org/download/
+5432
+
+//postgres
+> pg_ctl -D /usr/local/var/postgres start
+> pg_ctl -D /usr/local/var/postgres stop
