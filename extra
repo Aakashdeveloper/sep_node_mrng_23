@@ -39,18 +39,16 @@ Email With Node(nodemailer)
 TelegramChat
 NodeJs with postgres
 Chatapp
+LoginWith JWT
 ////////////
-10th tues
-Login/Logout(JWT)
-Nginx
-Docker
-
-11th wed
+12th thrus
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 Oauth(with google)
 
-12th 30min thrus
+
 AWS lambda micorservice
+Nginx
+Docker
 
 17th tuesd
 GraphQl API
