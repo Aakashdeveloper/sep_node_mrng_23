@@ -42,12 +42,9 @@ Chatapp
 LoginWith JWT
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 Oauth(with google)
-////////////
-13th friday
-AWS lambda micorservice
 GraphQl API
-
-
+AWS lambda micorservice
+////////////
 16th monday
 Paytm-Payment
 FIREBASE
@@ -287,3 +284,8 @@ https://www.postgresql.org/download/
 //postgres
 > pg_ctl -D /usr/local/var/postgres start
 > pg_ctl -D /usr/local/var/postgres stop
+
+
+///dummy api
+npm i -g json-server
+json-server --watch db.json --port 9888
