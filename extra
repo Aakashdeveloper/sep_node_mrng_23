@@ -44,14 +44,11 @@ Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-ap
 Oauth(with google)
 GraphQl API
 AWS lambda micorservice
-////////////
-16th monday
 Paytm-Payment
 FIREBASE
 Nginx
 Docker
 
-17th wed
 
 --------NOT---------
 React/Angular
@@ -289,3 +286,13 @@ https://www.postgresql.org/download/
 ///dummy api
 npm i -g json-server
 json-server --watch db.json --port 9888
+
+
+npm i -g firebase
+
+
+docker build . -t imagename
+docker run -p 3000:9000 imagename
+
+
+https://github.com/Aakashdeveloper/Node-Interview-Question
