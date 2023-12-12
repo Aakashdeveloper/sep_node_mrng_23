@@ -296,3 +296,38 @@ docker run -p 3000:9000 imagename
 
 
 https://github.com/Aakashdeveloper/Node-Interview-Question
+
+
+
+
+write postgress query
+
+input
+id	Name	Text		
+1	Client	Qatest1		
+1	WO	Wo1		
+1	Date	today1		
+1	PO	po1		
+2	Client	Qatest2		
+2	WO	Wo2		
+2	Date	today2		
+2	PO	po2		
+3	Client	Qatest3		
+3	WO	Wo3		
+3	Date	today4		
+3	PO	po4		
+
+output
+id 	client	wo	date	po
+1	Qatest1	Wo1	today1	po1
+2	Qatest2	Wo2	today2	po2
+3	Qatest3	Wo3	today3	po3
+
+SELECT
+    id,
+    MAX(CASE WHEN Name = 'Client' THEN Text END) AS client,
+    MAX(CASE WHEN Name = 'WO' THEN Text END) AS wo,
+    MAX(CASE WHEN Name = 'Date' THEN Text END) AS date,
+    MAX(CASE WHEN Name = 'PO' THEN Text END) AS po
+FROM your_table
+GROUP BY id;
